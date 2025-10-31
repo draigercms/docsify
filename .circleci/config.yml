@@ -1,7 +1,16 @@
-version: 2.1
-deployment:
-  production:
-    branch: main
-    commands:
-       - surge --project ./docs --domain lucifer.surge.sh
-  
+- run:
+    name: Plan a deploy
+    command: |
+      circleci run release plan \
+        --environment-name="production" \
+        --component-name="deploy" \
+        --target-version="6.6.6"
+# Your job here doing the actual deployment
+- run:
+    name: Update a deploy to SUCCESS
+    command: circleci run release update --status=SUCCESS 
+    when: on_success 
+- run:
+    name: Update planned deploy to FAILED
+    command: circleci run release update --status=FAILED 
+    when: on_fail
