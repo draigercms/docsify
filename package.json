@@ -4,7 +4,7 @@
   "description": "A delightfully Satanic Medics Team.",
   "author": "Dr Luciferous",
   "license": "MIT",
-  "homepage": "https://draigercms.github.io/docsify/",
+  "homepage": "https://github.com/draigercms/docsify/",
   "type": "module",
   "main": "dist/js/docsify-themeable.js",
   "unpkg": "dist/js/docsify-themeable.min.js",
@@ -28,7 +28,7 @@
     "watch": "run-p 'build:* -- -w'",
     "prewatch": "npm run build:scss",
     "version": "npm run prepare && npm test",
-    "deploy": "npm run compile && surge --project ./docs/ --domain lucifer.surge.sh"
+    "deploy": "npm run compile && surge --project ./docs --domain lucifer.surge.sh"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
