@@ -1,0 +1,3 @@
+<!--- cover.md --->
+
+# The Satanic
