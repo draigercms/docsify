@@ -1,5 +1,0 @@
-deployment:
-  production:
-    branch: main
-    commands:
-      - surge --project ./docs --domain lucifer.surge.sh
